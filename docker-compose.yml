@@ -17,6 +17,7 @@ services:
       retries: 10
 
   backend:
+    image: kavyasrikarri/docker-backend-2400032335:latest
     build:
       context: ./docker-backend-springboot
     container_name: campingsite-backend
@@ -31,6 +32,7 @@ services:
         condition: service_healthy
 
   frontend:
+    image: kavyasrikarri/docker-frontend-2400032335:latest
     build:
       context: ./docker-frontend-reactapp
     container_name: campingsite-frontend
